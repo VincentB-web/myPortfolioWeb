@@ -46,7 +46,7 @@ header {
 
     a {
         text-decoration: none;
-        color: #ae96ca;
+        color: #ece4f6;
     }
 
     ul {
@@ -115,10 +115,6 @@ header {
     }
 }
 @media (max-width: 600px) {
-        * {
-                color: white;
-        }
-    
         header {
     
             ul {
@@ -249,6 +245,21 @@ header {
 }
 
 @media (max-width: 600px){
+    * {
+            color: white;
+        }
+    header {
+        text-align: center;
+        align-items: center;
+        padding: 10px;
+        justify-content: space-between;
+        transform: translate(9px, 30px);
+
+        h2 a {
+            color: #ece4f6;
+        }
+    }
+
     .bSec {
             display: flex;
             padding-top: 100px;
