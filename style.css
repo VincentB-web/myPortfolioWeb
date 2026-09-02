@@ -114,7 +114,7 @@ header {
         padding: 30px;
     }
 }
-@media (max-width: 600px) {
+@media (max-width: 700px) {
         header {
     
             ul {
@@ -135,8 +135,8 @@ header {
 .bSec {
     display: flex;
     padding-top: 100px;
-    padding-right: 70px;
-    padding-left: 70px;
+    padding-right: 80px;
+    padding-left: 80px;
     justify-content: center;
 
     img {
@@ -169,13 +169,6 @@ header {
 .bSec-in {
     padding: 70px;
     justify-content: center;
-
-    .sLineups {
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
 
     .pGraph {
         display: none;
@@ -219,6 +212,18 @@ header {
         box-shadow: 0 4px 30px rgba(232, 232, 232, 0.858);
     }
 
+    .sLineups {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        .progLangIcon {
+            width: auto;
+            height: 50px;
+        }
+    }
+
     .stacksCard {
         background: rgba(255, 255, 255, 0.26);
         border-radius: 16px;
@@ -242,9 +247,13 @@ header {
         text-align: center;
         transition: .5s;
     }
+
+    .sLineups-Cont {
+        text-align: center;
+    }
 }
 
-@media (max-width: 600px){
+@media (max-width: 700px){
     * {
             color: white;
         }
@@ -292,4 +301,10 @@ header {
                 }
             }
         }
+}
+
+footer {
+    margin-top: 100%;
+    padding: 10px;
+    background-color: #7035b9;
 }
