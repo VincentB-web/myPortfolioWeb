@@ -242,8 +242,8 @@ header {
     }
 
     .stacksCard:hover {
+        box-shadow: 0 4px 30px rgba(195, 194, 194, 0.592);
         text-align: center;
-        width: 15%;
         transition: .5s;
     }
 }
