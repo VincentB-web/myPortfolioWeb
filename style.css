@@ -17,7 +17,7 @@ body {
     background-repeat: no-repeat;
 }
 
-/**Header/Navigation Bar*/
+/*====== Header/Navigation Bar ======*/
 header {
     background: rgba(255, 255, 255, 0.26);
     border-radius: 16px;
@@ -131,12 +131,10 @@ header {
         }
 }
 
-/* *Upper Body Section* */
+/*====== Upper Body Section======*/
 .bSec {
     display: flex;
-    padding-top: 100px;
-    padding-right: 80px;
-    padding-left: 80px;
+    padding: 100px 150px 80px 150px;
     justify-content: center;
 
     img {
@@ -165,7 +163,7 @@ header {
     }
 }
 
-/* *Main Body Sections* */
+/*======Main Body Sections======*/
 .bSec-in {
     padding: 70px;
     justify-content: center;
@@ -175,13 +173,7 @@ header {
     }
 
     .expCard {
-        background: rgba(255, 255, 255, 0.26);
-        border-radius: 16px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(6.7px);
-        -webkit-backdrop-filter: blur(6.7px);
-        border: 1px solid rgba(255, 255, 255, 0.62);
-        background: rgba(255, 255, 255, 0.26);
+        background: rgba(255, 255, 255, 0.089);
         border-radius: 16px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(6.7px);
@@ -225,13 +217,7 @@ header {
     }
 
     .stacksCard {
-        background: rgba(255, 255, 255, 0.26);
-        border-radius: 16px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(6.7px);
-        -webkit-backdrop-filter: blur(6.7px);
-        border: 1px solid rgba(255, 255, 255, 0.62);
-        background: rgba(255, 255, 255, 0.26);
+        background: rgba(255, 255, 255, 0.104);
         border-radius: 16px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(6.7px);
