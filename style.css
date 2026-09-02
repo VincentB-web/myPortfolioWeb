@@ -8,11 +8,12 @@
 * {
     margin: 0%;
     padding: 0%;
+    color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    background-image: linear-gradient(#44227a, #000000);
+    background-image: linear-gradient(#5d3d91, #000000);
     background-repeat: no-repeat;
 }
 
@@ -45,6 +46,7 @@ header {
 
     a {
         text-decoration: none;
+        color: #ae96ca;
     }
 
     ul {
@@ -113,23 +115,24 @@ header {
     }
 }
 @media (max-width: 600px) {
-    * {
-        color: white;
-    }
-
-    header {
-
-        ul {
+        * {
+                color: white;
+        }
+    
+        header {
+    
+            ul {
+                display: none;
+            }
+    
+            img {
+                display: block;
+            }
+        }
+    
+        .sidebar {
             display: none;
         }
-        img {
-            display: block;
-        }
-    }
-
-    .sidebar {
-        display: none;
-    }
 }
 
 /* *Upper Body Section* */
@@ -141,7 +144,7 @@ header {
     justify-content: center;
 
     img {
-        height: 350px;
+        height: 250px;
         width: auto;
         border-radius: 50px;
         margin-left: 40px;
@@ -159,7 +162,7 @@ header {
         .hText {
             font-family: monospace;
             font-size: 20px;
-            color: #333;
+            color: white;
 
             overflow: hidden;
         }
@@ -243,4 +246,39 @@ header {
         width: 15%;
         transition: .5s;
     }
+}
+
+@media (max-width: 600px){
+    .bSec {
+            display: flex;
+            padding-top: 100px;
+            padding-right: 10px;
+            padding-left: 10px;
+            justify-content: center;
+    
+            img {
+                height: 230px;
+                width: auto;
+                border-radius: 50px;
+                margin-left: 10px;
+                background: rgba(255, 255, 255, 0.26);
+                border: 1px solid rgba(255, 255, 255, 0.62);
+                backdrop-filter: blur(6.7px);
+            }
+    
+            div {
+                h1 {
+                    font-family: 'Playfair', sans-serif;
+                    font-size: 30px;
+                }
+    
+                .hText {
+                    font-family: monospace;
+                    font-size: 15px;
+                    color: white;
+    
+                    overflow: hidden;
+                }
+            }
+        }
 }
