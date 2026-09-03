@@ -288,10 +288,8 @@ header {
                 }
             }
         }
-}
 
-@media (max-width: 800px) {
-    .bSec-in {
+        .bSec-in {
         padding: 2%;
 
         .sLineups {
@@ -303,7 +301,7 @@ header {
                 margin: 0%;
 
                 .stacksCard {
-                    width: 100%;
+                    width: 80%;
                 }
             }
         }
