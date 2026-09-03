@@ -160,15 +160,13 @@ header {
 
         .heroPCont {
             display: inline-block;
-            padding: 0%;
-            margin: 0%;
 
             .gHead {
             font-family: 'Playfair', sans-serif;
             font-size: 50px;
             white-space: nowrap;
             overflow: hidden;
-            border-right: 5px solid;
+            border-right: 5px solid white;
             width: 225px;
             animation:
                 typing 1s steps(8) forwards,
@@ -184,7 +182,7 @@ header {
     }
 }
 @keyframes typing {
-    from {  width: 0}
+    from {  width: 0px}
 }
 @keyframes cursor {
     50% { border-color: transparent;}
@@ -286,7 +284,6 @@ header {
             padding-right: 10px;
             padding-left: 10px;
             justify-content: center;
-    
             img {
                 height: 200px;
                 width: auto;
