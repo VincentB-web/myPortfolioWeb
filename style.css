@@ -173,35 +173,25 @@ header {
     }
 
     .expCard {
-        background: rgba(255, 255, 255, 0.089);
+        background: rgba(255, 255, 255, 0.022);
         border-radius: 16px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(6.7px);
         -webkit-backdrop-filter: blur(6.7px);
-        border: 1px solid rgba(255, 255, 255, 0.62);
+        border: 1px solid rgba(151, 151, 151, 0.267);
 
         padding: 15px;
         margin-top: 10px;
     }
 
     .expCard:hover {
-        box-shadow: 0 4px 30px rgba(195, 194, 194, 0.592);
+        box-shadow: 0 4px 30px rgba(195, 194, 194, 0.43);
         transition: .5s;
-        margin: 15px;
+        margin: 5px;
         
         .pGraph  {
-            transition: .5s;
             display: block;
         }
-    }
-
-    .expCard::before {
-        transition: .5s;
-    }
-
-    .expCard::after {
-        transition: .5s;
-        box-shadow: 0 4px 30px rgba(232, 232, 232, 0.858);
     }
 
     .sLineups {
@@ -311,5 +301,7 @@ header {
 footer {
     margin-top: 100%;
     padding: 10px;
-    background-color: #7035b9;
+    backdrop-filter: blur(6.7px);
+    box-shadow: 0 4px 30px rgba(195, 194, 194, 0.592);
+    background: rgba(168, 168, 168, 0.211);
 }
