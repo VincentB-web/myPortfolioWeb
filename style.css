@@ -32,6 +32,8 @@ header {
     -webkit-backdrop-filter: blur(6.7px);
     border: 1px solid rgba(255, 255, 255, 0.62);
 
+    animation: navAnim 2s ease forwards;
+    transform: translate(50px, -90px);
     margin-top: 5px;
     width: 90%;
     padding: 10px;
@@ -41,7 +43,6 @@ header {
     justify-content: center;
     gap: 50px;
     position: fixed;
-    transform: translate(50px, 30px);
     z-index: 1000;
 
     a {
@@ -74,7 +75,15 @@ header {
         border-radius: 10px;
         background-color: #593880;
     }
+
 }
+
+@keyframes navAnim {
+        to {
+            transform: translate(50px, 30px);
+        }
+}
+
 .sidebar {
     display: none;
     background: rgba(255, 255, 255, 0.26);
@@ -239,10 +248,17 @@ header {
         align-items: center;
         padding: 10px;
         justify-content: space-between;
-        transform: translate(9px, 30px);
+        animation: navAnim 2s ease forwards;
+        transform: translate(10px, -50px);
 
         h2 a {
             color: #ece4f6;
+        }
+    }
+
+    @keyframes navAnim {
+        to {
+            transform: translate(10px, 30px);
         }
     }
 
