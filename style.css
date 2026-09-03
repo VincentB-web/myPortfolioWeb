@@ -167,7 +167,7 @@ header {
             white-space: nowrap;
             overflow: hidden;
             border-right: 5px solid;
-            width: 100%;
+            width: 91%;
             animation:
                 typing 1s steps(8) forwards,
                 cursor .4s step-end infinite alternate;
