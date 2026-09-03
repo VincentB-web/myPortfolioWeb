@@ -140,7 +140,7 @@ header {
         }
 }
 
-/*====== Upper Body Section======*/
+/*====== Hero Section======*/
 .bSec {
     display: flex;
     padding: 100px 150px 80px 150px;
@@ -157,19 +157,37 @@ header {
     }
 
     div {
-        h1 {
+
+        .heroPCont {
+            display: inline-block;
+
+            .gHead {
             font-family: 'Playfair', sans-serif;
             font-size: 50px;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 5px solid;
+            width: 100%;
+            animation:
+                typing 1s steps(8) forwards,
+                cursor .4s step-end infinite alternate;
+            }
         }
 
         .hText {
-            font-family: monospace;
-            font-size: 20px;
-            color: white;
-
-            overflow: hidden;
+                    font-family: monospace;
+                    font-size: 20px;
+                    color: white;
         }
     }
+}
+
+@keyframes typing {
+    from {  width: 0}
+}
+
+@keyframes cursor {
+    50% { border-color: transparent;}
 }
 
 /*======Main Body Sections======*/
