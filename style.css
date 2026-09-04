@@ -13,8 +13,13 @@
 }
 
 body {
-    background-image: linear-gradient(#5d3d91, #000000);
+    background-image: linear-gradient(#5d3d91, #1f1135);
     background-repeat: no-repeat;
+}
+
+a:hover{
+        transition: 2s;
+        text-decoration: underline;
 }
 
 /*====== Header/Navigation Bar ======*/
@@ -32,8 +37,9 @@ header {
     -webkit-backdrop-filter: blur(6.7px);
     border: 1px solid rgba(255, 255, 255, 0.62);
 
-    animation: navAnim 2s ease forwards;
+    animation: navAnim 1s ease-out forwards;
     transform: translate(50px, -90px);
+    opacity: 0%;
     margin-top: 5px;
     width: 90%;
     padding: 10px;
@@ -58,8 +64,7 @@ header {
         gap: 15px;
     }
 
-    img {
-        margin: 0%;
+    svg {
         display: none;
     }
 
@@ -70,30 +75,27 @@ header {
         background-color: #593880;
     }
 
-    .active-navbtn {
-        padding: 10px;
-        border-radius: 10px;
-        background-color: #593880;
-    }
-
 }
 
 @keyframes navAnim {
         to {
             transform: translate(50px, 30px);
+            opacity: 100%;
         }
 }
 
 .sidebar {
     display: none;
-    background: rgba(255, 255, 255, 0.26);
+    background: rgba(104, 98, 98, 0.26);
     border-radius: 0 16px 16px 0px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-right: .2px solid rgba(255, 255, 255, 0.62);;
     backdrop-filter: blur(6.7px);
     position: fixed;
     z-index: 1001;
     flex-direction: column;
     height: 100%;
+    padding: 10px;
 
     a {
         text-decoration: none;
@@ -103,6 +105,7 @@ header {
 
     .navExtbtn {
         border-radius: 0 16px 16px 0px;
+        padding: 10px 5px 5px 0px;
         width: 100%;
         display: flex;
         justify-content: right;
@@ -111,17 +114,21 @@ header {
     .sidebar-in {
         text-align: center;
         padding: 30px;
+        border-radius: 20px;
     }
 
     .sidebar-in:hover{
         transition: .10s;
+        background-color: rgba(236, 246, 254, 0.786);
         box-shadow: 0 4px 30px rgba(195, 194, 194, 0.592);
         border: 1px solid white;
+
+        .sidebar-in-a {
+            transition: .5s;
+            color: #181A18;
+        }
     }
 
-    .sidebar-in-a {
-        padding: 30px;
-    }
 }
 @media (max-width: 700px) {
         header {
@@ -141,7 +148,14 @@ header {
 }
 
 /*====== Hero Section======*/
-.bSec {
+@keyframes typing {
+    from {  width: 0px}
+}
+@keyframes cursor {
+    50% { border-color: transparent;}
+}
+
+.Hero {
     display: flex;
     padding: 100px 150px 80px 150px;
     justify-content: center;
@@ -149,11 +163,12 @@ header {
     img {
         height: 250px;
         width: auto;
-        border-radius: 50px;
+        border-radius: 50px 10px;
         margin-left: 40px;
         background: rgba(255, 255, 255, 0.26);
         border: 1px solid rgba(255, 255, 255, 0.62);
         backdrop-filter: blur(6.7px);
+        display: block;
     }
 
     div {
@@ -162,7 +177,7 @@ header {
             display: inline-block;
 
             .gHead {
-            font-family: 'Playfair', sans-serif;
+            font-family: monospace;
             font-size: 50px;
             white-space: nowrap;
             overflow: hidden;
@@ -175,27 +190,47 @@ header {
         }
 
         .hText {
-                    font-family: monospace;
+                    font-family: Arial, Helvetica, sans-serif;
                     font-size: 20px;
                     color: white;
         }
     }
 }
-@keyframes typing {
-    from {  width: 0px}
+
+.heroPCont-stacks {
+    display: inline-block;
+
+        .gHead-stacks {
+            font-family: 'Playfair', sans-serif;
+            font-size: 50px;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 5px solid white;
+            width: 100%;
+            animation:
+                typing 1s steps(10) forwards,
+                cursor .4s step-end infinite alternate;
+    }
 }
-@keyframes cursor {
-    50% { border-color: transparent;}
+
+.dullT {
+    display: none;
 }
 
 /*======Main Body Sections======*/
+
+
+@keyframes cardsAnim {
+    from {
+            transform: translate(0, 10px);
+            opacity: 0;
+    }
+}
+
 .bSec-in {
     padding: 70px;
     justify-content: center;
-
-    .pGraph {
-        display: none;
-    }
+    animation: cardsAnim 1s ease forwards;
 
     .expCard {
         background: rgba(255, 255, 255, 0.022);
@@ -205,6 +240,9 @@ header {
         -webkit-backdrop-filter: blur(6.7px);
         border: 1px solid rgba(151, 151, 151, 0.267);
 
+        animation-delay: calc(var(--i) * 0.2s);
+        animation: cardsAnim 1s ease-out forwards;
+
         padding: 15px;
         margin-top: 10px;
     }
@@ -212,47 +250,54 @@ header {
     .expCard:hover {
         box-shadow: 0 4px 30px rgba(195, 194, 194, 0.43);
         transition: .5s;
-        margin: 5px;
-        
-        .pGraph  {
-            display: block;
-        }
+        transform: translateY(-10px)
     }
 
     .sLineups {
         display: flex;
         gap: 20px;
-        flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: center;
+        text-align: center;
+        gap: 50px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+        border-radius: 20px;
+        backdrop-filter: blur(20px);
+        background-color: #c799ff82;
+        padding: 20px;
 
         .progLangIcon {
             width: auto;
             height: 50px;
         }
+        .stacksCard {
+            background: rgba(255, 255, 255, 0.104);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(6.7px);
+            -webkit-backdrop-filter: blur(6.7px);
+            border: .5px solid rgba(255, 255, 255, 0.62);
+
+            padding: 15px;
+            margin-top: 5px;
+            width: 100%;
+        }
+
+        .stacksCard:hover {
+            box-shadow: 0 4px 30px rgba(195, 194, 194, 0.592);
+            background-color: #ece4f6;
+            color: #181A18;
+            transition: .5s;
+        }
+
+        .sLineups-Cont {
+            padding: 30px;
+            text-align: center;
+            animation: cardsAnim 3s ease forwards;
+        }
     }
 
-    .stacksCard {
-        background: rgba(255, 255, 255, 0.104);
-        border-radius: 16px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(6.7px);
-        -webkit-backdrop-filter: blur(6.7px);
-        border: 1px solid rgba(255, 255, 255, 0.62);
-
-        padding: 15px;
-        margin-top: 5px;
-        width: 100%;
-    }
-
-    .stacksCard:hover {
-        box-shadow: 0 4px 30px rgba(195, 194, 194, 0.592);
-        text-align: center;
-        transition: .5s;
-    }
-
-    .sLineups-Cont {
-        text-align: center;
-    }
 }
 
 @media (max-width: 700px){
@@ -265,29 +310,41 @@ header {
         padding: 10px;
         justify-content: space-between;
         animation: navAnim 2s ease forwards;
+        opacity: 0%;
         transform: translate(10px, -50px);
 
         h2 a {
             color: #ece4f6;
+            font-size: 20px;
         }
-    }
+        svg {
+            display: block;
+            margin: 0%;
+        }
 
+    }
     @keyframes navAnim {
         to {
             transform: translate(10px, 30px);
+            opacity: 100%;
         }
     }
 
-    .bSec {
+    .Hero {
             display: flex;
-            padding-top: 100px;
+            flex-direction: column;
+            padding-top: 200px;
             padding-right: 10px;
             padding-left: 10px;
+            padding-bottom: 300px;
             justify-content: center;
+            text-align: center;
+
             img {
-                height: 200px;
-                width: auto;
-                border-radius: 50px;
+                height: auto;
+                width: 200px;
+                border-radius: 50px 10px;
+                align-self: center;
                 margin-left: 10px;
 
                 background: rgba(255, 255, 255, 0.26);
@@ -296,7 +353,8 @@ header {
             }
     
             div {
-                h1 {
+
+                .gHead {
                     font-family: 'Playfair', sans-serif;
                     font-size: 30px;
                 }
@@ -305,23 +363,23 @@ header {
                     font-family: monospace;
                     font-size: 15px;
                     color: white;
-    
-                    overflow: hidden;
+                    text-align: justify;
+                    margin-bottom: 50px;
+
                 }
             }
+        }
+
+        .dullT{
+            display: block;
+            padding-bottom: 20px;
         }
 
         .bSec-in {
         padding: 2%;
 
         .sLineups {
-            padding: 0%;
-            margin: 0%;
-
             .sLineups-Cont {
-                padding: 0%;
-                margin: 0%;
-
                 .stacksCard {
                     width: 80%;
                 }
