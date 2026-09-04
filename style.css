@@ -258,7 +258,6 @@ header {
         gap: 20px;
         justify-content: center;
         text-align: center;
-        gap: 50px;
         display: grid;
         grid-template-columns: auto auto auto;
         grid-template-rows: auto auto auto;
@@ -378,10 +377,17 @@ header {
         .bSec-in {
         padding: 2%;
 
+        .expCard {
+            height: 100px;
+            overflow: scroll;
+            scrollbar-width: none;
+        }
+
         .sLineups {
             padding: 10%;
             .sLineups-Cont {
                 padding: 10%;
+                margin: 0%;
                 .stacksCard {
                     width: 80%;
                 }
