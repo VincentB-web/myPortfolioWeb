@@ -266,7 +266,6 @@ header {
         backdrop-filter: blur(20px);
         background-color: #c799ff82;
         padding: 20px;
-        overflow: hidden;
 
         .progLangIcon {
             width: auto;
@@ -380,7 +379,9 @@ header {
         padding: 2%;
 
         .sLineups {
+            padding: 10%;
             .sLineups-Cont {
+                padding: 10%;
                 .stacksCard {
                     width: 80%;
                 }
