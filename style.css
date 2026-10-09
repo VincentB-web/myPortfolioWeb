@@ -11,6 +11,7 @@
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     user-select: none;
+    scrollbar-width: none;
 }
 
 body {
@@ -185,7 +186,7 @@ header {
             border-right: 5px solid white;
             width: 225px;
             animation:
-                typing 1s steps(8) forwards,
+                typing 1s steps(9) forwards,
                 cursor .4s step-end infinite alternate;
             }
         }
@@ -234,14 +235,13 @@ header {
     animation: cardsAnim 1s ease forwards;
 
     .expCard {
-        background: rgba(255, 255, 255, 0.022);
+        background: rgba(255, 255, 255, 0.214);
         border-radius: 16px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(6.7px);
         -webkit-backdrop-filter: blur(6.7px);
         border: 1px solid rgba(151, 151, 151, 0.267);
-
-        animation-delay: calc(var(--i) * 0.2s);
+        
         animation: cardsAnim 1s ease-out forwards;
 
         padding: 15px;
@@ -289,6 +289,10 @@ header {
             background-color: #ece4f6;
             color: #181A18;
             transition: .5s;
+            h2 {
+                color: #181A18;
+                transition: .5s;
+            }
         }
 
         .sLineups-Cont {
